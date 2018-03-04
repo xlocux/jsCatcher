@@ -1,5 +1,5 @@
 # jsCatcher
-Scrap javascript link from url/list
+Scrap javascript links from single url or list
 
 usage: jsCatcher.py [-h] [-u URL] [-l LIST] [-d DOWNLOAD] [-o OUTPUT]
 
