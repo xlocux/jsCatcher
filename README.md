@@ -35,18 +35,20 @@ optional arguments:
   
   -o OUTPUT, --output OUTPUT  Save javascript link to file
   
+  ------------------------------------------------------------------------
+  
   ### Examples
 
 * Collect links from a single URL (CLI output):
 
-``python jsCatcher.py -u https://www.example.com
+ - python jsCatcher.py -u https://www.example.com
 
 * Collect links from a list of URL and save to file:
 
-`python jsCatcher.py -l url.txt -o jslinks.txt
+ - python jsCatcher.py -l url.txt -o jslinks.txt
 
 * Collect javascript files from a list and save them sorted by domain:
 
-`python jsCatcher.py -l url.txt -d test/
+ - python jsCatcher.py -l url.txt -d test/
 
 
