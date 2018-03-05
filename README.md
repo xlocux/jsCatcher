@@ -1,5 +1,5 @@
 # jsCatcher
-Scrap javascript links from single url or list.
+Grab javascript links/files from a single url or list.
 
 -----------------------------------------------------------------------
 
@@ -12,6 +12,12 @@ $ cd jsCatcher
 $ python setup.py install
 
 ------------------------------------------------------------------------
+
+## Dependencies
+
+jsCatcher depends on the `requests`, `argparse`, `jsbeautifier` and `requests-file` python modules. These dependencies can all be installed using [pip](https://pypi.python.org/pypi/pip).
+
+-------------------------------------------------------------------------
 
 ## Usage:
 
