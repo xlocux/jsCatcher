@@ -5,14 +5,11 @@ Grab javascript links/files from a single url or list.
 
 ## Installation:
 
-``` bash
-git clone https://github.com/xlocux/jsCatcher.git
+$ git clone https://github.com/xlocux/jsCatcher.git
 
-``` bash
-cd jsCatcher
+$ cd jsCatcher
 
-``` bash
-pip install -r requirements.txt OR python setup.py install
+$ pip install -r requirements.txt OR python setup.py install
 
 ------------------------------------------------------------------------
 
@@ -44,15 +41,13 @@ optional arguments:
 
 * Collect links from a single URL (CLI output):
 
-``` bash
-python jsCatcher.py -u https://www.example.com
+ $ python jsCatcher.py -u https://www.example.com
 
 * Collect links from a list of URL and save to file:
-``` bash
-python jsCatcher.py -l url.txt -o jslinks.txt
+
+ $ python jsCatcher.py -l url.txt -o jslinks.txt
 
 * Collect javascript files from a list and save them sorted by domain:
-``` bash
-python jsCatcher.py -l url.txt -d test/
 
+ $ python jsCatcher.py -l url.txt -d test/
 
