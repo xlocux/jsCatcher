@@ -1,5 +1,11 @@
 # jsCatcher
-Scrap javascript links from single url or list
+Scrap javascript links from single url or list.
+
+INSTALLATION:
+
+$ git clone https://github.com/xlocux/jsCatcher.git
+$ cd jsCatcher
+$ python setup.py install
 
 usage: jsCatcher.py [-h] [-u URL] [-l LIST] [-d DOWNLOAD] [-o OUTPUT]
 
