@@ -51,4 +51,3 @@ optional arguments:
 
  $ python jsCatcher.py -l url.txt -d test/
 
-
