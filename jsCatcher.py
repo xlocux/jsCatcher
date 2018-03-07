@@ -57,11 +57,14 @@ def send_request(url):
 				if args.download:
 					domain = urlparse(url).hostname
 					if not os.path.exists(args.download + '/' + domain):
-						req = requests.get(urljoin(url, jslink), timeout=3, stream=True, verify=False)
-						os.makedirs(args.download + '/' + domain)
-					path = os.path.join(args.download, domain, (jslink.split('/')[-1]).split('?')[0])
-					with open(path, 'wb') as f:
-						f.write(req.content)
+						try:
+							req = requests.get(urljoin(url, jslink), timeout=3, stream=True, verify=False)
+							os.makedirs(args.download + '/' + domain)
+							path = os.path.join(args.download, domain, (jslink.split('/')[-1]).split('?')[0])
+							with open(path, 'wb') as f:
+								f.write(req.content)
+						except requests.exceptions.RequestException as e:
+							pass
 				elif args.output:
 					try:
 						output = open(args.output, 'a')
