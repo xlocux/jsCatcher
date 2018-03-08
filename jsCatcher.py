@@ -53,18 +53,28 @@ def send_request(url):
 		for n in soup.find_all('script'):
 			jslink = n.get('src')
 			if jslink is not None:
-				print urljoin(url, jslink)
+				uri = urljoin(url, jslink)
+				print uri
 				if args.download:
 					domain = urlparse(url).hostname
-					if not os.path.exists(args.download + '/' + domain):
-						try:
-							req = requests.get(urljoin(url, jslink), timeout=3, stream=True, verify=False)
+					try:
+						req = requests.get(uri, timeout=3, stream=True, verify=False)
+							
+						if not os.path.exists(args.download + '/' + domain):
 							os.makedirs(args.download + '/' + domain)
-							path = os.path.join(args.download, domain, (jslink.split('/')[-1]).split('?')[0])
+							path = os.path.join(args.download, domain, (jslink.split('/')[-1]))
 							with open(path, 'wb') as f:
 								f.write(req.content)
-						except requests.exceptions.RequestException as e:
-							pass
+								f.close()
+						else:
+							path = os.path.join(args.download, domain, (jslink.split('/')[-1]))
+							with open(path, 'a') as f:
+								f.write(req.content)
+								f.close()
+								
+					except requests.exceptions.RequestException as e:
+							print e
+							
 				elif args.output:
 					try:
 						output = open(args.output, 'a')
@@ -74,7 +84,7 @@ def send_request(url):
 		
 				
 	except requests.exceptions.RequestException as e:
-		pass
+		print e
 
 if args.url:
 	open(args.output, 'w').close()
