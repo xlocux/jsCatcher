@@ -13,7 +13,8 @@ from bs4 import BeautifulSoup
 from urlparse import urljoin
 from urlparse import urlparse
 from requests.packages.urllib3.exceptions import InsecureRequestWarning 
-
+reload(sys)
+sys.setdefaultencoding('utf8')
 
 # Command line Arguments
 parser = argparse.ArgumentParser()
@@ -59,22 +60,14 @@ def send_request(url):
 					domain = urlparse(url).hostname
 					try:
 						req = requests.get(uri, timeout=3, stream=True, verify=False)
-							
+						path = os.path.join(args.download, domain, (jslink.split('/')[-1]))
+						js = req.text
 						if not os.path.exists(args.download + '/' + domain):
 							os.makedirs(args.download + '/' + domain)
-							path = os.path.join(args.download, domain, (jslink.split('/')[-1]))
-							with open(path, 'wb') as f:
-								f.write(req.content)
-								f.close()
-						else:
-							path = os.path.join(args.download, domain, (jslink.split('/')[-1]))
-							with open(path, 'a') as f:
-								f.write(req.content)
-								f.close()
-								
+						with open(path, 'wb') as f:
+							f.write(js)			
 					except requests.exceptions.RequestException as e:
-							print e
-							
+							pass
 				elif args.output:
 					try:
 						output = open(args.output, 'a')
@@ -84,7 +77,7 @@ def send_request(url):
 		
 				
 	except requests.exceptions.RequestException as e:
-		print e
+		pass
 
 if args.url:
 	open(args.output, 'w').close()
