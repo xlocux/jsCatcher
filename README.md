@@ -9,7 +9,7 @@ $ git clone https://github.com/xlocux/jsCatcher.git
 
 $ cd jsCatcher
 
-$ pip install -r requirements.txt OR python setup.py install
+$ pip install -r requirements.txt
 
 ------------------------------------------------------------------------
 
