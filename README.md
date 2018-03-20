@@ -51,3 +51,6 @@ optional arguments:
 
  $ python jsCatcher.py -l url.txt -d test/
 
+### Then you can run Retire.js in order to catch vulnerable javascripts
+
+* retire --path '/Desktop/js' --outputformat json --outputpath '/Desktop/retire.json' 
