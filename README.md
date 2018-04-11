@@ -1,5 +1,6 @@
 # jsCatcher
-Grab javascript links/files from a single url or list.
+Grab javascript links/files from a single url or list. 
+I'm pretty new to python coding so any help to improve the script will be appreciated, expecially for multi-threading support ^_^
 
 -----------------------------------------------------------------------
 
