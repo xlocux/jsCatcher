@@ -20,9 +20,11 @@ sys.setdefaultencoding('utf8')
 parser = argparse.ArgumentParser()
 parser.add_argument('-u', '--url', help='Input a: URL', action='store')
 parser.add_argument('-l', '--list', help='Input a: URL list', action='store')
-parser.add_argument('-d', '--download', help='Download javascript files', action='store')
+parser.add_argument('-d', '--download', help='Download javascript files (it is also possible to specify the download path)', action='store')
 parser.add_argument('-o', '--output', help='Save javascript link to file', action='store')
+
 if len(sys.argv)<2:
+	print('eg: python %s -l url.list -d /url/' % sys.argv[0])
 	args = parser.parse_args(['-h'])
 else:
 	args = parser.parse_args()
@@ -71,11 +73,11 @@ def send_request(url):
 				elif args.output:
 					try:
 						output = open(args.output, 'a')
-						output.write (urljoin(url, jslink)+'\n')			
+						output.write (urljoin(url, jslink)+'\n')
 					except:
 						error('Failed writing to file:', args.output)
-		
-				
+
+
 	except requests.exceptions.RequestException as e:
 		pass
 
