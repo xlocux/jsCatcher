@@ -1,5 +1,6 @@
 # jsCatcher
 Grab javascript links/files from a single url or list. 
+
 I'm pretty new to python coding so any help to improve the script will be appreciated, expecially for multi-threading support ^_^
 
 -----------------------------------------------------------------------
@@ -30,17 +31,24 @@ usage: jsCatcher.py [-h] [-u URL] [-l LIST] [-d DOWNLOAD] [-o OUTPUT]
                     [-r RETIRE]
 
 optional arguments:
+
   -h, --help            show this help message and exit
+  
   -u URL, --url URL     Input a: URL
+  
   -l LIST, --list LIST  Input a: URL list
+  
   -d DOWNLOAD, --download DOWNLOAD
-                        Download javascript files (it is also possible to
-                        specify the download path)
+  
+                        Download javascript files (it is also possible to specify the download path)
+                        
   -o OUTPUT, --output OUTPUT
+  
                         Save javascript link to file
+                        
   -r RETIRE, --retire RETIRE
-                        Run Retire against downloaded javascripts (output file
-                        .json required and also retire js installed)
+  
+                        Run Retire against downloaded javascripts (output file .json required and also retire js installed)
 
   ------------------------------------------------------------------------
   
