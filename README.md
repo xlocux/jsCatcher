@@ -17,7 +17,8 @@ $ pip install -r requirements.txt
 ## Dependencies
 
 jsCatcher depends on the `requests`, `argparse`, `jsbeautifier` and `requests-file` python modules. These dependencies can all be installed using [pip](https://pypi.python.org/pypi/pip).
-RetireJS https://github.com/retirejs/retire.js/
+
+Also RetireJS (https://github.com/retirejs/retire.js/) is required to checks for js vulnerabilities.
 
 
 -------------------------------------------------------------------------
@@ -53,11 +54,11 @@ optional arguments:
 
  $ python jsCatcher.py -l url.txt -o jslinks.txt
 
-* Collect javascript files from a list and save them sorted by domain:
+* Collect javascript files from an url list and save them sorted by domain:
 
  $ python jsCatcher.py -l url.txt -d test/
 
-* Collect javascript files from a list and save them sorted by domain and run Retire JS:
+* Collect javascript files from an url list and save them sorted by domain then run Retire JS:
 
  $ python jsCatcher.py -l url.list -d /url/ -r example.json
 
