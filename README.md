@@ -1,8 +1,6 @@
 # jsCatcher
 Grab javascript links/files from a single url or list. 
 
-I'm pretty new to python coding so any help to improve the script will be appreciated, expecially for multi-threading support ^_^
-
 -----------------------------------------------------------------------
 
 ## Installation:
@@ -72,3 +70,7 @@ optional arguments:
 
 
  ### Then you can also run LinkFinder (https://github.com/GerbenJavado/LinkFinder) to cach others links or endpoints
+ 
+ ### TO DO
+ 
+  * Multithreading support
