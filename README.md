@@ -38,7 +38,7 @@ optional arguments:
   -o OUTPUT, --output OUTPUT
                         Save javascript link to file
   -r RETIRE, --retire RETIRE
-                        Run Retire against downloaded javascript (output file
+                        Run Retire against downloaded javascripts (output file
                         .json required and also retire js installed)
 
   ------------------------------------------------------------------------
@@ -57,4 +57,9 @@ optional arguments:
 
  $ python jsCatcher.py -l url.txt -d test/
 
+* Collect javascript files from a list and save them sorted by domain and run Retire JS:
+
  $ python jsCatcher.py -l url.list -d /url/ -r example.json
+
+
+ ### Then you can also run LinkFinder (https://github.com/GerbenJavado/LinkFinder) to cach others links or endpoints
