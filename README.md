@@ -40,15 +40,15 @@ optional arguments:
   
   -d DOWNLOAD, --download DOWNLOAD
   
-                        Download javascript files (it is also possible to specify the download path)
+   Download javascript files (it is also possible to specify the download path)
                         
   -o OUTPUT, --output OUTPUT
   
-                        Save javascript link to file
+   Save javascript links to file
                         
   -r RETIRE, --retire RETIRE
   
-                        Run Retire against downloaded javascripts (output file .json required and also retire js installed)
+   Run RetireJS against downloaded javascripts (output file .json is required)
 
   ------------------------------------------------------------------------
   
