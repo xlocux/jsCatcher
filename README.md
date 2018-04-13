@@ -16,26 +16,31 @@ $ pip install -r requirements.txt
 
 ## Dependencies
 
-jsCatcher depends on the `requests`, `argparse`, `jsbeautifier` and `requests-file` python modules. These dependencies can all be installed using [pip](https://pypi.python.org/pypi/pip).
+jsCatcher depends on the `requests`, `argparse`, `jsbeautifier` and `requests-file` python modules. 
+RetireJS https://github.com/retirejs/retire.js/
+These dependencies can all be installed using [pip](https://pypi.python.org/pypi/pip).
 
 -------------------------------------------------------------------------
 
 ## Usage:
 
-jsCatcher.py [-h] [-u URL] [-l LIST] [-d DOWNLOAD] [-o OUTPUT]
+
+usage: jsCatcher.py [-h] [-u URL] [-l LIST] [-d DOWNLOAD] [-o OUTPUT]
+                    [-r RETIRE]
 
 optional arguments:
-
   -h, --help            show this help message and exit
-  
   -u URL, --url URL     Input a: URL
-  
   -l LIST, --list LIST  Input a: URL list
-  
-  -d DOWNLOAD, --download DOWNLOAD  Download javascript files
-  
-  -o OUTPUT, --output OUTPUT  Save javascript link to file
-  
+  -d DOWNLOAD, --download DOWNLOAD
+                        Download javascript files (it is also possible to
+                        specify the download path)
+  -o OUTPUT, --output OUTPUT
+                        Save javascript link to file
+  -r RETIRE, --retire RETIRE
+                        Run Retire against downloaded javascript (output file
+                        .json required and also retire js installed)
+
   ------------------------------------------------------------------------
   
   ### Examples
@@ -52,6 +57,4 @@ optional arguments:
 
  $ python jsCatcher.py -l url.txt -d test/
 
-### Then you can run Retire.js in order to catch vulnerable javascripts
-
-* retire --path '/Desktop/js' --outputformat json --outputpath '/Desktop/retire.json' 
+ $ python jsCatcher.py -l url.list -d /url/ -r example.json

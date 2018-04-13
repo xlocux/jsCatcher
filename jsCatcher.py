@@ -22,6 +22,7 @@ parser.add_argument('-u', '--url', help='Input a: URL', action='store')
 parser.add_argument('-l', '--list', help='Input a: URL list', action='store')
 parser.add_argument('-d', '--download', help='Download javascript files (it is also possible to specify the download path)', action='store')
 parser.add_argument('-o', '--output', help='Save javascript link to file', action='store')
+parser.add_argument('-r', '--retire', help='Run Retire against downloaded javascript (output file .json required and also retire js installed)', action='store')
 
 if len(sys.argv)<2:
 	print('eg: python %s -l url.list -d /url/' % sys.argv[0])
@@ -100,4 +101,11 @@ if args.list:
 			send_request(uri)
 		except:
 			pass
-		
+
+if args.retire:
+	args = 'retire --path ' + args.download + ' --outputformat json --outputpath ' + args.retire
+	os.system(args)
+
+
+	
+
