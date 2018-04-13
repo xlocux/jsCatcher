@@ -16,9 +16,9 @@ $ pip install -r requirements.txt
 
 ## Dependencies
 
-jsCatcher depends on the `requests`, `argparse`, `jsbeautifier` and `requests-file` python modules. 
+jsCatcher depends on the `requests`, `argparse`, `jsbeautifier` and `requests-file` python modules. These dependencies can all be installed using [pip](https://pypi.python.org/pypi/pip).
 RetireJS https://github.com/retirejs/retire.js/
-These dependencies can all be installed using [pip](https://pypi.python.org/pypi/pip).
+
 
 -------------------------------------------------------------------------
 
